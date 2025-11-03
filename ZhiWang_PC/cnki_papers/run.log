@@ -1,0 +1,1091 @@
+[2025-08-14 08:31:50] ===== 知网论文爬虫启动 =====
+[2025-08-14 08:32:17] 未发现 Cookies 文件，跳过载入
+[2025-08-14 08:34:21] 已保存快照：cnki_papers\snapshots\20250814_083421_612173_search_elems_fail.html / cnki_papers\snapshots\20250814_083421_612173_search_elems_fail.png
+[2025-08-14 08:34:21] 指数退避等待 1.83s ...
+[2025-08-14 08:36:25] 已保存快照：cnki_papers\snapshots\20250814_083625_525737_search_elems_fail.html / cnki_papers\snapshots\20250814_083625_525737_search_elems_fail.png
+[2025-08-14 08:36:25] 指数退避等待 2.42s ...
+[2025-08-14 08:38:30] 已保存快照：cnki_papers\snapshots\20250814_083829_950373_search_elems_fail.html / cnki_papers\snapshots\20250814_083829_950373_search_elems_fail.png
+[2025-08-14 08:38:30] 指数退避等待 3.11s ...
+[2025-08-14 08:38:33] 执行搜索失败：Message: 未找到搜索框; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+[2025-08-14 08:38:33] 已保存快照：cnki_papers\snapshots\20250814_083833_234840_perform_search_fail.html / cnki_papers\snapshots\20250814_083833_234840_perform_search_fail.png
+[2025-08-14 08:38:33] 指数退避等待 1.04s ...
+[2025-08-14 08:38:46] 未发现 Cookies 文件，跳过载入
+[2025-08-14 08:40:50] 已保存快照：cnki_papers\snapshots\20250814_084050_830142_search_elems_fail.html / cnki_papers\snapshots\20250814_084050_830142_search_elems_fail.png
+[2025-08-14 08:40:50] 指数退避等待 1.42s ...
+[2025-08-14 08:42:54] 已保存快照：cnki_papers\snapshots\20250814_084254_195192_search_elems_fail.html / cnki_papers\snapshots\20250814_084254_195192_search_elems_fail.png
+[2025-08-14 08:42:54] 指数退避等待 1.77s ...
+[2025-08-14 08:44:58] 已保存快照：cnki_papers\snapshots\20250814_084457_897482_search_elems_fail.html / cnki_papers\snapshots\20250814_084457_897482_search_elems_fail.png
+[2025-08-14 08:44:58] 指数退避等待 2.62s ...
+[2025-08-14 08:45:00] 执行搜索失败：Message: 未找到搜索框; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+[2025-08-14 08:45:00] 已保存快照：cnki_papers\snapshots\20250814_084500_709543_perform_search_fail.html / cnki_papers\snapshots\20250814_084500_709543_perform_search_fail.png
+[2025-08-14 08:45:00] 指数退避等待 2.35s ...
+[2025-08-14 08:45:15] 未发现 Cookies 文件，跳过载入
+[2025-08-14 08:47:20] 已保存快照：cnki_papers\snapshots\20250814_084719_997567_search_elems_fail.html / cnki_papers\snapshots\20250814_084719_997567_search_elems_fail.png
+[2025-08-14 08:47:20] 指数退避等待 1.37s ...
+[2025-08-14 08:49:23] 已保存快照：cnki_papers\snapshots\20250814_084923_291669_search_elems_fail.html / cnki_papers\snapshots\20250814_084923_291669_search_elems_fail.png
+[2025-08-14 08:49:23] 指数退避等待 2.49s ...
+[2025-08-14 08:51:27] 已保存快照：cnki_papers\snapshots\20250814_085127_743881_search_elems_fail.html / cnki_papers\snapshots\20250814_085127_743881_search_elems_fail.png
+[2025-08-14 08:51:27] 指数退避等待 3.16s ...
+[2025-08-14 08:51:31] 执行搜索失败：Message: 未找到搜索框; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+[2025-08-14 08:51:31] 已保存快照：cnki_papers\snapshots\20250814_085131_059870_perform_search_fail.html / cnki_papers\snapshots\20250814_085131_059870_perform_search_fail.png
+[2025-08-14 08:51:31] 指数退避等待 3.09s ...
+[2025-08-14 08:51:34] 搜索失败，程序退出
+[2025-08-14 10:45:58] ===== 知网论文爬虫启动 =====
+[2025-08-14 10:46:17] 未发现 Cookies 文件，跳过载入
+[2025-08-14 10:48:22] 已保存快照：cnki_papers\snapshots\20250814_104822_402212_search_elems_fail.html / cnki_papers\snapshots\20250814_104822_402212_search_elems_fail.png
+[2025-08-14 10:48:22] 指数退避等待 1.40s ...
+[2025-08-14 10:48:56] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:48:56] 指数退避等待 2.34s ...
+[2025-08-14 10:48:58] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:48:58] 指数退避等待 3.11s ...
+[2025-08-14 10:49:01] 执行搜索失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:01] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:01] 指数退避等待 1.38s ...
+[2025-08-14 10:49:03] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:03] 指数退避等待 1.39s ...
+[2025-08-14 10:49:04] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:04] 指数退避等待 2.20s ...
+[2025-08-14 10:49:10] ===== 知网论文爬虫启动 =====
+[2025-08-14 10:49:33] 未发现 Cookies 文件，跳过载入
+[2025-08-14 10:49:45] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:45] 指数退避等待 1.40s ...
+[2025-08-14 10:49:47] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:47] 指数退避等待 1.74s ...
+[2025-08-14 10:49:48] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:48] 指数退避等待 2.94s ...
+[2025-08-14 10:49:51] 执行搜索失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:51] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:51] 指数退避等待 1.35s ...
+[2025-08-14 10:49:53] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 10:49:53] 指数退避等待 1.39s ...
+[2025-08-14 10:57:44] ===== 知网论文爬虫启动 =====
+[2025-08-14 10:58:04] 未发现 Cookies 文件，跳过载入
+[2025-08-14 11:00:08] 已保存快照：cnki_papers\snapshots\20250814_110008_782437_search_elems_fail.html / cnki_papers\snapshots\20250814_110008_782437_search_elems_fail.png
+[2025-08-14 11:00:08] 指数退避等待 1.83s ...
+[2025-08-14 11:01:44] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:44] 指数退避等待 1.89s ...
+[2025-08-14 11:01:46] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:46] 指数退避等待 3.02s ...
+[2025-08-14 11:01:49] 执行搜索失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:49] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:49] 指数退避等待 1.50s ...
+[2025-08-14 11:01:50] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:50] 指数退避等待 1.80s ...
+[2025-08-14 11:01:52] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:52] 指数退避等待 1.77s ...
+[2025-08-14 11:01:54] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:54] 指数退避等待 2.34s ...
+[2025-08-14 11:01:56] 执行搜索失败：多次尝试无法打开页面
+[2025-08-14 11:01:56] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:56] 指数退避等待 1.71s ...
+[2025-08-14 11:01:58] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:01:58] 指数退避等待 1.86s ...
+[2025-08-14 11:02:00] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:02:00] 指数退避等待 2.49s ...
+[2025-08-14 11:02:02] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:02:02] 指数退避等待 3.16s ...
+[2025-08-14 11:02:05] 执行搜索失败：多次尝试无法打开页面
+[2025-08-14 11:02:05] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:02:05] 指数退避等待 2.37s ...
+[2025-08-14 11:02:08] 搜索失败，程序退出
+[2025-08-14 11:09:23] ===== 知网论文爬虫启动 =====
+[2025-08-14 11:09:42] 未发现 Cookies 文件，跳过载入
+[2025-08-14 11:11:47] 已保存快照：cnki_papers\snapshots\20250814_111147_070645_search_elems_fail.html / cnki_papers\snapshots\20250814_111147_070645_search_elems_fail.png
+[2025-08-14 11:11:47] 指数退避等待 1.92s ...
+[2025-08-14 11:13:50] 已保存快照：cnki_papers\snapshots\20250814_111350_755051_search_elems_fail.html / cnki_papers\snapshots\20250814_111350_755051_search_elems_fail.png
+[2025-08-14 11:13:50] 指数退避等待 1.80s ...
+[2025-08-14 11:14:07] 用户中断
+[2025-08-14 11:14:14] ===== 知网论文爬虫启动 =====
+[2025-08-14 11:14:33] 未发现 Cookies 文件，跳过载入
+[2025-08-14 11:15:26] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-08-14 11:15:26] 处理第 1 页 ...
+[2025-08-14 11:15:32] 本页抓取 20 条
+[2025-08-14 11:15:32] 已保存快照：cnki_papers\snapshots\20250814_111532_010964_page_1.html / cnki_papers\snapshots\20250814_111532_010964_page_1.png
+[2025-08-14 11:15:32] 已保存断点文件：cnki_papers\checkpoint_20250814_111532.csv
+[2025-08-14 11:16:00] 处理第 2 页 ...
+[2025-08-14 11:16:05] 本页抓取 20 条
+[2025-08-14 11:16:05] 已保存快照：cnki_papers\snapshots\20250814_111605_709985_page_2.html / cnki_papers\snapshots\20250814_111605_709985_page_2.png
+[2025-08-14 11:16:05] 已保存断点文件：cnki_papers\checkpoint_20250814_111605.csv
+[2025-08-14 11:16:33] 处理第 3 页 ...
+[2025-08-14 11:16:38] 本页抓取 20 条
+[2025-08-14 11:16:38] 已保存快照：cnki_papers\snapshots\20250814_111638_655026_page_3.html / cnki_papers\snapshots\20250814_111638_655026_page_3.png
+[2025-08-14 11:16:38] 已保存断点文件：cnki_papers\checkpoint_20250814_111638.csv
+[2025-08-14 11:17:07] 处理第 4 页 ...
+[2025-08-14 11:17:11] 本页抓取 20 条
+[2025-08-14 11:17:12] 已保存快照：cnki_papers\snapshots\20250814_111711_876831_page_4.html / cnki_papers\snapshots\20250814_111711_876831_page_4.png
+[2025-08-14 11:17:12] 已保存断点文件：cnki_papers\checkpoint_20250814_111712.csv
+[2025-08-14 11:17:40] 处理第 5 页 ...
+[2025-08-14 11:17:43] 本页抓取 20 条
+[2025-08-14 11:17:44] 已保存快照：cnki_papers\snapshots\20250814_111743_855396_page_5.html / cnki_papers\snapshots\20250814_111743_855396_page_5.png
+[2025-08-14 11:17:44] 已保存断点文件：cnki_papers\checkpoint_20250814_111744.csv
+[2025-08-14 11:18:15] 爬取完成！共获取 100 篇论文，已保存至：cnki_papers\cnki_results_20250814_111815.csv
+[2025-08-14 11:18:15] ===== 爬虫结束 =====
+[2025-08-14 11:27:04] ===== 知网论文爬虫启动 =====
+[2025-08-14 11:27:23] Cookies 已载入
+[2025-08-14 11:28:20] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-08-14 11:28:20] 处理第 1 页 ...
+[2025-08-14 11:28:23] 本页抓取 20 条
+[2025-08-14 11:28:23] 已保存快照：cnki_papers\snapshots\20250814_112823_539076_page_1.html / cnki_papers\snapshots\20250814_112823_539076_page_1.png
+[2025-08-14 11:28:23] 已保存断点文件：cnki_papers\checkpoint_20250814_112823.csv
+[2025-08-14 11:28:41] 用户中断
+[2025-08-14 11:28:51] ===== 知网论文爬虫启动 =====
+[2025-08-14 11:29:00] 执行搜索失败：Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=139.0.7258.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263e13]
+	(No symbol) [0x0x253760]
+	(No symbol) [0x0x2715d2]
+	(No symbol) [0x0x2d7cac]
+	(No symbol) [0x0x2f1fc9]
+	(No symbol) [0x0x2d11d6]
+	(No symbol) [0x0x2a0833]
+	(No symbol) [0x0x2a16a4]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	GetHandleVerifier [0x0x437738+94152]
+	GetHandleVerifier [0x0x4378c2+94546]
+	GetHandleVerifier [0x0x422bda+9322]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:29:00] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:29:00] 指数退避等待 1.36s ...
+[2025-08-14 11:29:01] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:29:01] 指数退避等待 1.07s ...
+[2025-08-14 11:29:02] 用户中断
+[2025-08-14 11:29:36] ===== 知网论文爬虫启动 =====
+[2025-08-14 11:29:56] Cookies 已载入
+[2025-08-14 11:30:35] 设置年份筛选失败：Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263e13]
+	(No symbol) [0x0x2ac89e]
+	(No symbol) [0x0x2acc3b]
+	(No symbol) [0x0x2f4ec2]
+	(No symbol) [0x0x2d1424]
+	(No symbol) [0x0x2f26ea]
+	(No symbol) [0x0x2d11d6]
+	(No symbol) [0x0x2a0833]
+	(No symbol) [0x0x2a16a4]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	GetHandleVerifier [0x0x437738+94152]
+	GetHandleVerifier [0x0x4378c2+94546]
+	GetHandleVerifier [0x0x422bda+9322]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:30:55] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-08-14 11:30:55] 处理第 1 页 ...
+[2025-08-14 11:31:00] 本页抓取 20 条
+[2025-08-14 11:31:00] 已保存快照：cnki_papers\snapshots\20250814_113100_087295_page_1.html / cnki_papers\snapshots\20250814_113100_087295_page_1.png
+[2025-08-14 11:31:00] 已保存断点文件：cnki_papers\checkpoint_20250814_113100.csv
+[2025-08-14 11:31:28] 处理第 2 页 ...
+[2025-08-14 11:31:33] 本页抓取 20 条
+[2025-08-14 11:31:33] 已保存快照：cnki_papers\snapshots\20250814_113133_663380_page_2.html / cnki_papers\snapshots\20250814_113133_663380_page_2.png
+[2025-08-14 11:31:33] 已保存断点文件：cnki_papers\checkpoint_20250814_113133.csv
+[2025-08-14 11:32:01] 处理第 3 页 ...
+[2025-08-14 11:32:03] 本页抓取 20 条
+[2025-08-14 11:32:03] 已保存快照：cnki_papers\snapshots\20250814_113203_494362_page_3.html / cnki_papers\snapshots\20250814_113203_494362_page_3.png
+[2025-08-14 11:32:03] 已保存断点文件：cnki_papers\checkpoint_20250814_113203.csv
+[2025-08-14 11:32:32] 处理第 4 页 ...
+[2025-08-14 11:32:35] 本页抓取 20 条
+[2025-08-14 11:32:35] 已保存快照：cnki_papers\snapshots\20250814_113235_410406_page_4.html / cnki_papers\snapshots\20250814_113235_410406_page_4.png
+[2025-08-14 11:32:35] 已保存断点文件：cnki_papers\checkpoint_20250814_113235.csv
+[2025-08-14 11:33:03] 处理第 5 页 ...
+[2025-08-14 11:33:09] 本页抓取 20 条
+[2025-08-14 11:33:09] 已保存快照：cnki_papers\snapshots\20250814_113309_416264_page_5.html / cnki_papers\snapshots\20250814_113309_416264_page_5.png
+[2025-08-14 11:33:09] 已保存断点文件：cnki_papers\checkpoint_20250814_113309.csv
+[2025-08-14 11:33:41] 爬取完成！共获取 60 篇论文，已保存至：cnki_papers\cnki_results_20250814_113341.csv
+[2025-08-14 11:33:41] ===== 爬虫结束 =====
+[2025-08-14 11:38:18] ===== 知网论文爬虫启动 =====
+[2025-08-14 11:38:25] 执行搜索失败：Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=139.0.7258.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263e13]
+	(No symbol) [0x0x253760]
+	(No symbol) [0x0x2715d2]
+	(No symbol) [0x0x2d7cac]
+	(No symbol) [0x0x2f1fc9]
+	(No symbol) [0x0x2d11d6]
+	(No symbol) [0x0x2a0833]
+	(No symbol) [0x0x2a16a4]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	GetHandleVerifier [0x0x437738+94152]
+	GetHandleVerifier [0x0x4378c2+94546]
+	GetHandleVerifier [0x0x422bda+9322]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:38:25] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x42fd33+62915]
+	GetHandleVerifier [0x0x42fd74+62980]
+	(No symbol) [0x0x263c70]
+	(No symbol) [0x0x29faf8]
+	(No symbol) [0x0x2d1296]
+	(No symbol) [0x0x2cce75]
+	(No symbol) [0x0x2cc3f6]
+	(No symbol) [0x0x235755]
+	(No symbol) [0x0x235cae]
+	(No symbol) [0x0x23613d]
+	GetHandleVerifier [0x0x698d23+2590131]
+	GetHandleVerifier [0x0x693f6a+2570234]
+	GetHandleVerifier [0x0x4559ea+217722]
+	GetHandleVerifier [0x0x446058+153832]
+	GetHandleVerifier [0x0x44c4bd+179533]
+	(No symbol) [0x0x235420]
+	(No symbol) [0x0x234c36]
+	GetHandleVerifier [0x0x7d509c+3885356]
+	BaseThreadInitThunk [0x0x763e5d49+25]
+	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
+
+[2025-08-14 11:38:25] 指数退避等待 1.92s ...
+[2025-08-14 11:38:27] 用户中断
+[2025-08-14 11:39:07] ===== 知网论文爬虫启动 =====
+[2025-08-14 11:39:24] Cookies 已载入
+[2025-08-14 11:40:14] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-08-14 11:40:14] 处理第 1 页 ...
+[2025-08-14 11:44:52] 本页抓取 20 条
+[2025-08-14 11:44:52] 已保存快照：cnki_papers\snapshots\20250814_114452_380701_page_1.html / cnki_papers\snapshots\20250814_114452_380701_page_1.png
+[2025-08-14 11:44:52] 已保存断点文件：cnki_papers\checkpoint_20250814_114452.csv
+[2025-08-14 11:45:21] 处理第 2 页 ...
+[2025-08-14 11:49:52] 本页抓取 20 条
+[2025-08-14 11:49:52] 已保存快照：cnki_papers\snapshots\20250814_114952_695530_page_2.html / cnki_papers\snapshots\20250814_114952_695530_page_2.png
+[2025-08-14 11:49:52] 已保存断点文件：cnki_papers\checkpoint_20250814_114952.csv
+[2025-08-14 11:50:20] 处理第 3 页 ...
+[2025-08-14 11:54:51] 本页抓取 20 条
+[2025-08-14 11:54:52] 已保存快照：cnki_papers\snapshots\20250814_115451_859567_page_3.html / cnki_papers\snapshots\20250814_115451_859567_page_3.png
+[2025-08-14 11:54:52] 已保存断点文件：cnki_papers\checkpoint_20250814_115452.csv
+[2025-08-14 11:55:19] 处理第 4 页 ...
+[2025-08-14 11:59:45] 本页抓取 20 条
+[2025-08-14 11:59:45] 已保存快照：cnki_papers\snapshots\20250814_115945_097664_page_4.html / cnki_papers\snapshots\20250814_115945_097664_page_4.png
+[2025-08-14 11:59:45] 已保存断点文件：cnki_papers\checkpoint_20250814_115945.csv
+[2025-08-14 12:00:12] 处理第 5 页 ...
+[2025-08-14 12:04:40] 本页抓取 20 条
+[2025-08-14 12:04:40] 已保存快照：cnki_papers\snapshots\20250814_120440_436588_page_5.html / cnki_papers\snapshots\20250814_120440_436588_page_5.png
+[2025-08-14 12:04:40] 已保存断点文件：cnki_papers\checkpoint_20250814_120440.csv
+[2025-08-14 12:05:10] 爬取完成！共获取 100 篇论文，已保存至：cnki_papers\cnki_results_20250814_120510.csv
+[2025-08-14 12:05:10] ===== 爬虫结束 =====
+[2025-11-03 13:56:24] ===== 知网论文爬虫启动 =====
+[2025-11-03 13:57:33] 用户中断
+[2025-11-03 13:57:33] 未获取到任何论文
+[2025-11-03 13:57:33] ===== 爬虫结束 =====
+[2025-11-03 13:57:37] ===== 知网论文爬虫启动 =====
+[2025-11-03 13:57:55] 用户中断
+[2025-11-03 13:57:55] 未获取到任何论文
+[2025-11-03 13:57:55] ===== 爬虫结束 =====
+[2025-11-03 13:58:00] ===== 知网论文爬虫启动 =====
+[2025-11-03 13:58:52] ===== 知网论文爬虫启动 =====
+[2025-11-03 14:01:22] Cookies 已载入
+[2025-11-03 14:01:28] 已保存快照：cnki_papers\snapshots\20251103_140128_331303_search_elems_fail.html / cnki_papers\snapshots\20251103_140128_331303_search_elems_fail.png
+[2025-11-03 14:01:28] 指数退避等待 1.41s ...
+[2025-11-03 14:02:16] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-11-03 14:02:16] 处理第 1 页 ...
+[2025-11-03 14:04:16] 用户中断
+[2025-11-03 14:04:29] 未获取到任何论文
+[2025-11-03 14:04:29] ===== 爬虫结束 =====
+[2025-11-03 14:05:31] ===== 知网论文爬虫启动 =====
+[2025-11-03 14:06:56] Cookies 已载入
+[2025-11-03 14:07:44] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-11-03 14:07:44] 处理第 1 页 ...
+[2025-11-03 14:12:37] 本页抓取 20 条
+[2025-11-03 14:12:37] 已保存快照：cnki_papers\snapshots\20251103_141237_713519_page_1.html / cnki_papers\snapshots\20251103_141237_713519_page_1.png
+[2025-11-03 14:12:37] 已保存断点文件：cnki_papers\checkpoint_20251103_141237.csv
+[2025-11-03 14:13:05] 处理第 2 页 ...
+[2025-11-03 14:17:44] ===== 知网论文爬虫启动 =====
+[2025-11-03 14:17:52] 执行搜索失败：Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x11e58c3
+	0x11e5904
+	0xffe76d
+	0xfed980
+	0x100c734
+	0x10734c5
+	0x108e799
+	0x106c766
+	0x103dac0
+	0x103ede4
+	0x1467974
+	0x1462bea
+	0x120e5b4
+	0x11fdd28
+	0x1204d8d
+	0x11eded8
+	0x11ee09c
+	0x11d7d1a
+	0x750d5d49
+	0x7710d6db
+	0x7710d661
+
+[2025-11-03 14:17:52] 保存快照失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x11e58c3
+	0x11e5904
+	0xffe5bb
+	0x103ceea
+	0x106c826
+	0x1068090
+	0x10675c3
+	0xfce4ed
+	0xfcea7e
+	0xfcef3d
+	0x1467974
+	0x1462bea
+	0x120e5b4
+	0x11fdd28
+	0x1204d8d
+	0xfce1a3
+	0xfcd858
+	0x15bffdf
+	0x750d5d49
+	0x7710d6db
+	0x7710d661
+
+[2025-11-03 14:17:52] 指数退避等待 1.03s ...
+[2025-11-03 14:17:53] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x11e58c3
+	0x11e5904
+	0xffe5bb
+	0x103ceea
+	0x106c826
+	0x1068090
+	0x10675c3
+	0xfce4ed
+	0xfcea7e
+	0xfcef3d
+	0x1467974
+	0x1462bea
+	0x120e5b4
+	0x11fdd28
+	0x1204d8d
+	0xfce1a3
+	0xfcd858
+	0x15bffdf
+	0x750d5d49
+	0x7710d6db
+	0x7710d661
+
+[2025-11-03 14:17:53] 指数退避等待 1.11s ...
+[2025-11-03 14:17:55] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x11e58c3
+	0x11e5904
+	0xffe5bb
+	0x103ceea
+	0x106c826
+	0x1068090
+	0x10675c3
+	0xfce4ed
+	0xfcea7e
+	0xfcef3d
+	0x1467974
+	0x1462bea
+	0x120e5b4
+	0x11fdd28
+	0x1204d8d
+	0xfce1a3
+	0xfcd858
+	0x15bffdf
+	0x750d5d49
+	0x7710d6db
+	0x7710d661
+
+[2025-11-03 14:17:55] 指数退避等待 2.26s ...
+[2025-11-03 14:17:57] 打开页面失败：Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x11e58c3
+	0x11e5904
+	0xffe5bb
+	0x103ceea
+	0x106c826
+	0x1068090
+	0x10675c3
+	0xfce4ed
+	0xfcea7e
+	0xfcef3d
+	0x1467974
+	0x1462bea
+	0x120e5b4
+	0x11fdd28
+	0x1204d8d
+	0xfce1a3
+	0xfcd858
+	0x15bffdf
+	0x750d5d49
+	0x7710d6db
+	0x7710d661
+
+[2025-11-03 14:17:57] 指数退避等待 2.92s ...
+[2025-11-03 14:17:58] 用户中断
+[2025-11-03 14:18:04] ===== 知网论文爬虫启动 =====
+[2025-11-03 14:18:22] Cookies 已载入
+[2025-11-03 14:19:12] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-11-03 14:19:12] 处理第 1 页 ...
+[2025-11-03 14:23:51] 本页抓取 20 条
+[2025-11-03 14:23:51] 已保存快照：cnki_papers\snapshots\20251103_142351_314241_page_1.html / cnki_papers\snapshots\20251103_142351_314241_page_1.png
+[2025-11-03 14:23:51] 已保存断点文件：cnki_papers\checkpoint_20251103_142351.csv
+[2025-11-03 14:24:20] 处理第 2 页 ...
+[2025-11-03 14:28:08] 用户中断
+[2025-11-03 14:28:20] 爬取完成！共获取 20 篇论文，已保存至：cnki_papers\cnki_results_20251103_142820.csv
+[2025-11-03 14:28:20] ===== 爬虫结束 =====
+[2025-11-03 14:28:29] ===== 知网论文爬虫（多线程版）启动 =====
+[2025-11-03 14:28:46] Cookies 已载入
+[2025-11-03 14:29:34] Cookies 已保存：cnki_papers\session_cookies.pkl
+[2025-11-03 14:29:34] 处理第 1 页 ...
+[2025-11-03 14:29:39] 多线程提取 20 篇论文摘要（并发数：3）
+[2025-11-03 14:29:47] 本页抓取 20 条记录
+[2025-11-03 14:29:47] 已保存快照：cnki_papers\snapshots\20251103_142947_311301_page_1.html / cnki_papers\snapshots\20251103_142947_311301_page_1.png
+[2025-11-03 14:29:47] 已保存断点文件：cnki_papers\checkpoint_20251103_142947.csv
+[2025-11-03 14:30:14] 处理第 2 页 ...
+[2025-11-03 14:30:17] 多线程提取 20 篇论文摘要（并发数：3）
+[2025-11-03 14:30:25] 本页抓取 20 条记录
+[2025-11-03 14:30:25] 已保存快照：cnki_papers\snapshots\20251103_143025_136494_page_2.html / cnki_papers\snapshots\20251103_143025_136494_page_2.png
+[2025-11-03 14:30:25] 已保存断点文件：cnki_papers\checkpoint_20251103_143025.csv
+[2025-11-03 14:30:53] 处理第 3 页 ...
+[2025-11-03 14:30:57] 多线程提取 20 篇论文摘要（并发数：3）
+[2025-11-03 14:31:06] 本页抓取 20 条记录
+[2025-11-03 14:31:06] 已保存快照：cnki_papers\snapshots\20251103_143106_376777_page_3.html / cnki_papers\snapshots\20251103_143106_376777_page_3.png
+[2025-11-03 14:31:06] 已保存断点文件：cnki_papers\checkpoint_20251103_143106.csv
+[2025-11-03 14:31:34] 处理第 4 页 ...
+[2025-11-03 14:31:37] 多线程提取 20 篇论文摘要（并发数：3）
+[2025-11-03 14:31:45] 本页抓取 20 条记录
+[2025-11-03 14:31:45] 已保存快照：cnki_papers\snapshots\20251103_143145_594719_page_4.html / cnki_papers\snapshots\20251103_143145_594719_page_4.png
+[2025-11-03 14:31:45] 已保存断点文件：cnki_papers\checkpoint_20251103_143145.csv
+[2025-11-03 14:32:14] 处理第 5 页 ...
+[2025-11-03 14:32:18] 多线程提取 20 篇论文摘要（并发数：3）
+[2025-11-03 14:32:31] 本页抓取 20 条记录
+[2025-11-03 14:32:31] 已保存快照：cnki_papers\snapshots\20251103_143231_236336_page_5.html / cnki_papers\snapshots\20251103_143231_236336_page_5.png
+[2025-11-03 14:32:31] 已保存断点文件：cnki_papers\checkpoint_20251103_143231.csv
+[2025-11-03 14:33:02] 爬取完成！共获取 99 篇论文，已保存至：cnki_papers\cnki_results_20251103_143302.csv
+[2025-11-03 14:33:02] ===== 爬虫结束 =====
