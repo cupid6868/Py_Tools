@@ -3,7 +3,7 @@ from tkinter import filedialog, messagebox, ttk, font
 import pandas as pd
 import os
 import threading
-from multiprocessing import Process, Queue
+from queue import Queue  # 线程安全队列（替换多进程队列）
 import time
 from typing import List, Dict
 
@@ -23,21 +23,21 @@ class ExcelMergerPro:
         self.file1_path = tk.StringVar()
         self.file2_path = tk.StringVar()
         self.output_path = tk.StringVar(value="合并结果.xlsx")
-        self.df1 = None  # 仅预览用
-        self.df2 = None  # 仅预览用
+        self.df1 = None  # 预览用
+        self.df2 = None  # 预览用
         self.selected_cols = []
         self.is_running = False
         self.start_time = 0
         self.total_rows = 0
         self.processed_rows = 0
 
-        # 进程间通信
+        # 线程间通信（用queue替代multiprocessing.Queue）
         self.progress_queue = Queue()
         self.control_queue = Queue()
         self.log_queue = Queue()
-        self.merge_process = None
+        self.merge_thread = None  # 合并线程（原进程）
 
-        # 匹配配置（支持多对匹配）
+        # 匹配配置
         self.match_pairs: List[Dict] = []
 
         self.create_widgets()
@@ -45,7 +45,7 @@ class ExcelMergerPro:
         self.start_log_listener()
 
     def create_widgets(self):
-        # 主滚动区域（保持不变）
+        # 主滚动区域
         main_canvas = tk.Canvas(self.root)
         scrollbar = ttk.Scrollbar(self.root, orient="vertical", command=main_canvas.yview)
         scrollable_frame = ttk.Frame(main_canvas)
@@ -61,13 +61,13 @@ class ExcelMergerPro:
         main_canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
 
-        # 顶部标题（强调多条件匹配）
+        # 顶部标题
         title_font = font.Font(family="SimHei", size=16, weight="bold")
         tk.Label(scrollable_frame, text="Excel智能合并工具（多条件联合匹配）", font=title_font).pack(pady=10)
         tk.Label(scrollable_frame, text="注：所有匹配对必须同时匹配成功才会执行合并", font=("SimHei", 9, "italic"),
                  fg="#666").pack(pady=2)
 
-        # 文件选择区域（保持不变）
+        # 文件选择区域
         file_frame = tk.Frame(scrollable_frame)
         file_frame.pack(fill=tk.X, padx=20, pady=5)
 
@@ -96,7 +96,7 @@ class ExcelMergerPro:
         tk.Button(file_frame, text="选择路径", command=self.browse_output, font=self.font).grid(row=2, column=2, padx=5,
                                                                                                 pady=5)
 
-        # 匹配设置区域（强调多条件联合匹配）
+        # 匹配设置区域
         match_frame = tk.LabelFrame(scrollable_frame, text="匹配规则设置（所有条件必须同时满足）", font=self.font)
         match_frame.pack(fill=tk.X, padx=20, pady=10)
 
@@ -107,7 +107,7 @@ class ExcelMergerPro:
         # 添加匹配对按钮
         tk.Button(match_frame, text="添加匹配对（多条件）", command=self.add_match_pair, font=self.font).pack(pady=10)
 
-        # 列选择区域（保持不变）
+        # 列选择区域
         col_select_frame = tk.LabelFrame(scrollable_frame, text="选择第二个表中需要合并的列", font=self.font)
         col_select_frame.pack(fill=tk.BOTH, expand=False, padx=20, pady=10)
 
@@ -146,13 +146,13 @@ class ExcelMergerPro:
         self.info2 = tk.Text(self.frame2, height=5, width=45, font=self.small_font, state=tk.DISABLED)
         self.info2.pack(fill=tk.BOTH, expand=True, pady=5)
 
-        # 右侧匹配日志（增强多条件匹配记录）
+        # 右侧匹配日志
         log_frame = tk.LabelFrame(log_preview_frame, text="多条件匹配日志（所有条件需同时满足）", font=self.font)
         log_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=5, pady=5)
         self.log_text = tk.Text(log_frame, height=10, width=45, font=self.small_font, state=tk.DISABLED)
         self.log_text.pack(fill=tk.BOTH, expand=True, pady=5)
 
-        # 进度条、状态和时间统计（保持不变）
+        # 进度条、状态和时间统计
         progress_frame = tk.Frame(scrollable_frame)
         progress_frame.pack(fill=tk.X, padx=20, pady=5)
 
@@ -165,7 +165,7 @@ class ExcelMergerPro:
         self.time_var = tk.StringVar(value="耗时：--:--")
         tk.Label(progress_frame, textvariable=self.time_var, font=self.font, fg="#666").pack(side=tk.RIGHT, padx=10)
 
-        # 操作按钮（保持不变）
+        # 操作按钮
         btn_frame = tk.Frame(scrollable_frame)
         btn_frame.pack(pady=15)
 
@@ -180,14 +180,13 @@ class ExcelMergerPro:
         tk.Button(btn_frame, text="清除选择", command=self.clear_selection,
                   font=("SimHei", 12), width=15).pack(side=tk.LEFT, padx=10)
 
-        tk.Button(btn_frame, text="退出", command=self.root.quit,
+        # 退出按钮：关闭子窗口，显示主界面
+        tk.Button(btn_frame, text="退出",
+                  command=lambda: self.root.destroy(),  # 直接销毁子窗口
                   font=("SimHei", 12), width=15, bg="#f44336", fg="white").pack(side=tk.LEFT, padx=10)
 
         # 初始添加一对匹配列
         self.add_match_pair()
-
-    # 以下方法（add_match_pair到cancel_merge）与原代码一致，省略重复部分
-    # （保持UI交互逻辑不变，仅修改process_merge函数）
 
     def add_match_pair(self):
         """动态添加匹配对（带独立规则）"""
@@ -499,18 +498,20 @@ class ExcelMergerPro:
         self.processed_rows = 0
         self.run_btn.config(state=tk.DISABLED)
         self.cancel_btn.config(state=tk.NORMAL)
-        self.status_var.set("正在初始化处理进程...")
+        self.status_var.set("正在初始化处理线程...")
         self.time_var.set("耗时：00:00")
         self.progress["value"] = 5
 
-        self.merge_process = Process(
+        # 使用多线程（替换多进程）
+        self.merge_thread = threading.Thread(
             target=process_merge,
             args=(
                 file1, file2, output, valid_pairs, self.selected_cols,
                 self.progress_queue, self.control_queue, self.log_queue
-            )
+            ),
+            daemon=True  # 线程随主程序退出
         )
-        self.merge_process.start()
+        self.merge_thread.start()
 
         self.root.after(500, self.check_process_status)
 
@@ -518,11 +519,13 @@ class ExcelMergerPro:
         if not self.is_running:
             return
 
-        if self.merge_process.is_alive():
+        # 检查线程是否存活
+        if self.merge_thread.is_alive():
             if not self.control_queue.empty():
                 cmd = self.control_queue.get()
                 if cmd == "cancel":
-                    self.merge_process.terminate()
+                    # 线程无法强制终止，通过队列发送取消信号
+                    self.control_queue.put("cancel")
                     self.is_running = False
                     self.status_var.set("合并已取消")
                     self.run_btn.config(state=tk.NORMAL)
@@ -552,13 +555,13 @@ class ExcelMergerPro:
             return
 
         if messagebox.askyesno("确认", "确定取消？"):
-            self.control_queue.put("cancel")
+            self.control_queue.put("cancel")  # 发送取消信号
             self.status_var.set("正在取消...")
             self.cancel_btn.config(state=tk.DISABLED)
 
 
 def process_merge(file1, file2, output, match_pairs, selected_cols, progress_queue, control_queue, log_queue):
-    """独立进程中的数据处理逻辑（强化多条件联合匹配）"""
+    """线程中的数据处理逻辑（多条件联合匹配）"""
     try:
         # 1. 读取数据
         df1 = pd.read_excel(file1)
@@ -569,7 +572,7 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
 
         log_queue.put(f"开始多条件联合匹配（共{len(match_pairs)}个匹配条件）")
 
-        # 2. 预处理匹配列并构建索引（每个匹配对单独构建索引）
+        # 2. 预处理匹配列并构建索引
         match_indexes = []
         for pair_idx, pair in enumerate(match_pairs, 1):
             col1, col2, rule = pair["col1"], pair["col2"], pair["rule"]
@@ -579,12 +582,12 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
             if rule == "fuzzy":
                 df1_col = df1_col.str.lower()
 
-            # 处理表2列：构建索引（存储所有匹配行的索引，而非仅第一个）
+            # 处理表2列：构建索引
             df2_col = df2[col2].fillna("").astype(str).str.strip()
             if rule == "fuzzy":
                 df2_col = df2_col.str.lower()
 
-            # 索引结构：{值: [行索引1, 行索引2, ...]}（存储所有匹配行）
+            # 索引结构：{值: [行索引1, 行索引2, ...]}
             index_data = {}
             for idx, val in df2_col.items():
                 if val not in index_data:
@@ -611,8 +614,9 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
         # 4. 处理数据（核心：多条件联合匹配）
         batch_size = 100
         for i in range(0, total_rows, batch_size):
-            # 检查取消命令
+            # 检查取消信号（线程必须主动响应）
             if not control_queue.empty() and control_queue.get() == "cancel":
+                log_queue.put("合并已取消")
                 return
 
             end = min(i + batch_size, total_rows)
@@ -636,7 +640,7 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
                     if data["rule"] == "exact":
                         if val1 in data["index_data"]:
                             matched_indices = data["index_data"][val1]
-                            matched_sets.append(set(matched_indices))  # 转为集合便于交集计算
+                            matched_sets.append(set(matched_indices))
                             row_log.append(f"  → 满足，表2匹配行：{matched_indices[:3]}...（共{len(matched_indices)}行）")
                         else:
                             all_matched = False
@@ -657,12 +661,12 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
                             row_log.append(f"  → 不满足（无模糊匹配值）")
                             break
 
-                # 所有条件都满足后，计算交集（必须存在共同匹配的行）
+                # 所有条件都满足后，计算交集
                 if all_matched and matched_sets:
-                    # 计算所有匹配对的行索引交集（找到同时满足所有条件的行）
+                    # 计算所有匹配对的行索引交集
                     common_indices = matched_sets[0]
                     for s in matched_sets[1:]:
-                        common_indices.intersection_update(s)  # 交集运算
+                        common_indices.intersection_update(s)
 
                     if common_indices:
                         # 取第一个共同匹配行
@@ -686,9 +690,9 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
                 else:
                     row_log.append("  → 未通过所有条件，不合并")
 
-                # 输出日志（每10行）
+                # 每10行输出一次日志
                 if idx % 10 == 0:
-                    log_queue.put("\n".join(row_log))  # 换行显示，更清晰
+                    log_queue.put("\n".join(row_log))
 
             # 更新进度
             progress_queue.put({
@@ -705,4 +709,3 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
     except Exception as e:
         log_queue.put(f"错误：{str(e)}")
         progress_queue.put({"type": "error", "msg": str(e)})
-
