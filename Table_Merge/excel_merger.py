@@ -706,4 +706,3 @@ def process_merge(file1, file2, output, match_pairs, selected_cols, progress_que
         log_queue.put(f"错误：{str(e)}")
         progress_queue.put({"type": "error", "msg": str(e)})
 
-
