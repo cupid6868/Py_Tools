@@ -163,10 +163,13 @@ class MainInterface:
         ).pack(side=tk.RIGHT, padx=20, pady=15)
 
     def launch_excel_merger(self):
-        """启动Excel合并工具（作为子窗口）"""
+        """启动Excel合并工具（作为子窗口），同时隐藏主界面"""
         try:
             self.status_var.set(f"启动 {self.tools['excel_merger']['name']}...")
             self.root.update()  # 刷新界面显示状态
+
+            # 隐藏主界面
+            self.root.withdraw()
 
             # 创建子窗口并实例化合并工具
             merger_window = tk.Toplevel(self.root)
@@ -175,10 +178,12 @@ class MainInterface:
             merger_window.minsize(1000, 650)
             merger_window.option_add("*Font", "SimHei 10")
 
-            # 子窗口关闭时更新状态
+            # 子窗口关闭时更新状态并显示主界面
             def on_merger_close():
                 merger_window.destroy()
                 self.status_var.set("就绪 - 已关闭Excel智能合并工具")
+                # 显示主界面
+                self.root.deiconify()
 
             merger_window.protocol("WM_DELETE_WINDOW", on_merger_close)
 
@@ -187,6 +192,8 @@ class MainInterface:
             self.status_var.set(f"运行中 - {self.tools['excel_merger']['name']}")
 
         except Exception as e:
+            # 若启动失败，确保主界面显示
+            self.root.deiconify()
             self.status_var.set("错误 - 启动工具失败")
             messagebox.showerror("启动失败", f"无法启动Excel智能合并工具：\n{str(e)}")
 
