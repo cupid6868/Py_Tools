@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk, font, filedialog
 import os
 import sys
-# 导入Excel合并工具类（关键：从模块中直接导入，实现单EXE打包）
+# 导入 Excel合并工具类
 from excel_merger import ExcelMergerPro
 
 
@@ -64,7 +64,7 @@ class MainInterface:
             fg="#666"
         ).pack(anchor=tk.W, pady=5)
 
-        # 功能按钮区域（使用网格布局更整齐）
+        # 功能按钮区域（网格布局）
         tools_frame = tk.Frame(self.root, bg="#f5f5f5", padx=40, pady=10)
         tools_frame.pack(fill=tk.BOTH, expand=True)
 
@@ -85,7 +85,7 @@ class MainInterface:
             text=self.tools["excel_merger"]["name"],
             bg=self.tools["excel_merger"]["color"],
             fg="white",
-            command=self.launch_excel_merger, **btn_style
+            command=self.launch_excel_merger,** btn_style
         )
         self.excel_merge_btn.grid(row=0, column=0, padx=15, pady=20)
 
@@ -105,7 +105,7 @@ class MainInterface:
             text=self.tools["stats_analyzer"]["name"],
             bg=self.tools["stats_analyzer"]["color"],
             fg="white",
-            command=lambda: self.show_under_development("数据统计分析工具"), **btn_style
+            command=lambda: self.show_under_development("数据统计分析工具"),** btn_style
         )
         self.stats_btn.grid(row=1, column=0, padx=15, pady=20)
 
@@ -125,7 +125,7 @@ class MainInterface:
             text=self.tools["batch_processor"]["name"],
             bg=self.tools["batch_processor"]["color"],
             fg="white",
-            command=lambda: self.show_under_development("批量处理工具"), **btn_style
+            command=lambda: self.show_under_development("批量处理工具"),** btn_style
         )
         self.batch_btn.grid(row=2, column=0, padx=15, pady=20)
 
@@ -163,27 +163,26 @@ class MainInterface:
         ).pack(side=tk.RIGHT, padx=20, pady=15)
 
     def launch_excel_merger(self):
-        """启动Excel合并工具（作为子窗口），同时隐藏主界面"""
+        """启动Excel合并工具（子窗口），同时隐藏主界面"""
         try:
             self.status_var.set(f"启动 {self.tools['excel_merger']['name']}...")
-            self.root.update()  # 刷新界面显示状态
+            self.root.update()
 
             # 隐藏主界面
             self.root.withdraw()
 
-            # 创建子窗口并实例化合并工具
+            # 创建子窗口
             merger_window = tk.Toplevel(self.root)
             merger_window.title(self.tools["excel_merger"]["name"])
             merger_window.geometry("1100x700")
             merger_window.minsize(1000, 650)
             merger_window.option_add("*Font", "SimHei 10")
 
-            # 子窗口关闭时更新状态并显示主界面
+            # 子窗口关闭时显示主界面
             def on_merger_close():
                 merger_window.destroy()
                 self.status_var.set("就绪 - 已关闭Excel智能合并工具")
-                # 显示主界面
-                self.root.deiconify()
+                self.root.deiconify()  # 显示主界面
 
             merger_window.protocol("WM_DELETE_WINDOW", on_merger_close)
 
@@ -192,7 +191,7 @@ class MainInterface:
             self.status_var.set(f"运行中 - {self.tools['excel_merger']['name']}")
 
         except Exception as e:
-            # 若启动失败，确保主界面显示
+            # 启动失败时确保主界面显示
             self.root.deiconify()
             self.status_var.set("错误 - 启动工具失败")
             messagebox.showerror("启动失败", f"无法启动Excel智能合并工具：\n{str(e)}")
@@ -210,10 +209,9 @@ class MainInterface:
 
 
 if __name__ == "__main__":
-    # 解决高DPI屏幕显示问题
+    # 高DPI屏幕适配
     try:
         from ctypes import windll
-
         windll.shcore.SetProcessDpiAwareness(1)
     except:
         pass
