@@ -140,7 +140,7 @@ class MultiAnalysisTool:
         # 前十条记录结果展示区 - 完全固定大小
         record_frame = ttk.LabelFrame(self.main_frame, text="前十条记录结果", padding=5)
         record_frame.pack(fill=tk.X, pady=4)
-        record_frame.configure(height=300)  # 固定记录区总高度
+        record_frame.configure(height=480)  # 固定记录区总高度
         record_frame.pack_propagate(False)  # 关键：禁止记录区随内容变化
 
         # 表格容器（用于放置表格和滚动条）- 固定尺寸
@@ -738,9 +738,9 @@ class MultiAnalysisTool:
                 self.record_tree.column(col, width=100, anchor="center", stretch=False)  # 禁止列拉伸
 
             # 取前十条数据
-            top10_df = self.df.head(10).copy()
+            top10_df = self.df.head(20).copy()
             score_col = f'{method_name}综合得分'
-            top10_df[score_col] = self.results['scores'][:10]
+            top10_df[score_col] = self.results['scores'][:20]
 
             # 填充记录数据
             for _, row in top10_df.iterrows():
