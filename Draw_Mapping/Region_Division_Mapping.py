@@ -24,10 +24,10 @@ class Config:
     # --------------------- 【文件路径配置】 ---------------------
     EXCEL_PATH = r"E:\Test_Code\平衡面板.xlsx"
     SHP_PATH = r"E:\Test_Code\2023年县级\县级.shp"
-    BORDER_PATH = r"E:\Test_Code\国界\Export_Output.shp"
-    COASTLINE_PATH = r"E:\Test_Code\海岸线\Export_Output_2.shp"
+    BORDER_PATH = r"E:\Test_Code\国界\Export_Output.shp"  # 新增国界
+    COASTLINE_PATH = r"E:\Test_Code\海岸线\Export_Output_2.shp"  # 新增海岸线
     SVG_COMPASS_PATH = r"E:\Test_Code\指北针.svg"
-    AGRI_ZONE_PATH = r"E:\Test_Code\中国东中西三大区域分布qu3\qu-sheng.shp"
+    AGRI_ZONE_PATH = r"E:\Test_Code\中国气候区划\Climate_quhua.shp"
 
     # --------------------- 【年份与绘图设置】 ---------------------
     TARGET_YEAR = 2023
@@ -39,7 +39,7 @@ class Config:
     NULL_COLOR = "white"
     BORDER_COLOR = "black"
     BORDER_WIDTH = 0.1
-    COAST_COLOR = "#0A93FC"
+    COAST_COLOR = "#0A93FC"  # 海岸线颜色
     NINE_LINE_COLOR = "red"
     NINE_LINE_WIDTH = 1.2
 
@@ -155,67 +155,60 @@ def interactive_translate(zones):
 
 
 # ==============================================
-# ✅ 精准匹配算法
+# 空间匹配
 # ==============================================
-def accurate_zone_match(county_gdf, zone_gdf, zone_col):
+def robust_zone_match(county_gdf, zone_gdf, zone_col):
     county = county_gdf.copy()
     zone = zone_gdf.copy()
 
-    if county.crs is None:
-        county.set_crs(epsg=4326, inplace=True)
-    if zone.crs is None:
-        zone.set_crs(epsg=4326, inplace=True)
+    if county.crs != zone.crs:
+        zone = zone.to_crs(county.crs)
 
-    county_proj = county.to_crs(epsg=3857)
-    zone_proj = zone.to_crs(epsg=3857)
+    county = county[county.geometry.is_valid & ~county.geometry.is_empty].copy()
+    zone = zone[zone.geometry.is_valid & ~zone.geometry.is_empty].copy()
 
-    county_centroid = county_proj.geometry.centroid
-    county_center_gdf = gpd.GeoDataFrame(county, geometry=county_centroid, crs=county_proj.crs)
+    sindex = zone.sindex
+    county["Agri_Zone"] = None
 
-    joined = gpd.sjoin(county_center_gdf, zone_proj, how='left', predicate='within')
-    county["Agri_Zone"] = joined[zone_col].values
+    for idx, county_row in county.iterrows():
+        county_geom = county_row.geometry
+        best_name = None
+        max_score = -1
 
-    na_mask = county["Agri_Zone"].isna()
-    if na_mask.any():
-        zone_points = zone_proj.copy()
-        zone_points["center"] = zone_proj.geometry.centroid
+        possible_matches = zone.iloc[list(sindex.intersection(county_geom.bounds))]
 
-        for idx in county[na_mask].index:
-            pt = county_center_gdf.geometry.iloc[idx]
-            zone_points["dist"] = zone_points.distance(pt)
-            best = zone_points.loc[zone_points["dist"].idxmin(), zone_col]
-            county.loc[idx, "Agri_Zone"] = best
+        for _, zrow in possible_matches.iterrows():
+            zone_geom = zrow.geometry
+            zone_name = zrow[zone_col]
 
-    match_success_count = county["Agri_Zone"].notna().sum()
-    print(f"\n✅ 空间匹配完成：成功匹配 {match_success_count} 个县级单元")
+            try:
+                center = county_geom.centroid
+                if center.within(zone_geom):
+                    best_name = zone_name
+                    break
+
+                inter = county_geom.intersection(zone_geom)
+                score = inter.area
+                dis = center.distance(zone_geom)
+                score += (100 / (dis + 1))
+
+                if score > max_score:
+                    max_score = score
+                    best_name = zone_name
+            except:
+                continue
+
+        if best_name is None:
+            try:
+                center_pt = county_geom.centroid
+                zone["dist"] = zone.geometry.distance(center_pt)
+                best_name = zone.loc[zone["dist"].idxmin(), zone_col]
+            except:
+                best_name = zone[zone_col].iloc[0]
+
+        county.at[idx, "Agri_Zone"] = best_name
+
     return county
-
-
-# ==============================================
-# ✅ 匹配结果诊断统计
-# ==============================================
-def print_match_statistics(gdf):
-    print("\n" + "=" * 80)
-    print("📊 【空间匹配结果统计】")
-    print("=" * 80)
-
-    zone_counts = gdf["Agri_Zone"].value_counts().sort_index()
-    total_zones = len(zone_counts)
-    total_counties = len(gdf)
-    success_count = gdf["Agri_Zone"].notna().sum()
-
-    print(f"📍 匹配后有效区域种类：{total_zones} 类")
-    print(f"📍 县级单元总数：{total_counties} 个")
-    print(f"📍 成功匹配数量：{success_count} 个")
-    print(f"📍 匹配成功率：{success_count / total_counties * 100:.2f}%")
-    print("-" * 80)
-
-    print("📌 各区域匹配县域数量：")
-    for zone, cnt in zone_counts.items():
-        pct = cnt / success_count * 100
-        print(f"   🔹 {zone}：{cnt} 个 ({pct:.2f}%)")
-
-    print("=" * 80 + "\n")
 
 
 # ==============================================
@@ -230,6 +223,7 @@ def add_scalebar(ax, gdf):
     scale_total_km = 2000
     ratio = scale_total_km / map_width_km
 
+    # 右下角，整体再右移，顺序 0 → 1000 → 2000
     x0 = 0.70
     x1 = x0 + ratio * 0.8
     y = 0.08
@@ -239,6 +233,7 @@ def add_scalebar(ax, gdf):
     ax.plot([x1, x1], [y, y + 0.02], lw=3, c='k', transform=ax.transAxes)
     ax.plot([(x0 + x1) / 2, (x0 + x1) / 2], [y, y + 0.015], lw=2, c='k', transform=ax.transAxes)
 
+    # 文字从左到右：0 — 1000 — 2000 km
     ax.text(x0, y - 0.015, '0', fontsize=cfg.SCALE_TEXT_SIZE, ha='center', va='top', transform=ax.transAxes)
     ax.text((x0 + x1) / 2, y - 0.015, '1000', fontsize=cfg.SCALE_TEXT_SIZE, ha='center', va='top',
             transform=ax.transAxes)
@@ -284,10 +279,13 @@ def draw_map():
     df = pd.read_excel(cfg.EXCEL_PATH)
     county_gdf = read_shp_auto_encoding(cfg.SHP_PATH)
 
+    # 读取 国界 + 海岸线
     border_gdf = read_shp_auto_encoding(cfg.BORDER_PATH)
     coastline_gdf = read_shp_auto_encoding(cfg.COASTLINE_PATH)
+
     zone_gdf = read_shp_auto_encoding(cfg.AGRI_ZONE_PATH)
 
+    # 坐标系统一
     county_gdf, zone_gdf, border_gdf, coastline_gdf = align_crs(
         county_gdf, zone_gdf, border_gdf, coastline_gdf
     )
@@ -297,7 +295,7 @@ def draw_map():
     print(zone_gdf.columns.tolist())
     print("=" * 60)
 
-    print("\n📌 分区SHP字段预览：")
+    print("\n📌 分区SHP字段预览（超长内容→EXTRM）：")
     print_col = zone_gdf.copy().drop(columns=['geometry'], errors='ignore')
     for col in print_col.columns:
         print_col[col] = print_col[col].astype(str).apply(lambda x: x if len(str(x)) <= 10 else "EXTRM")
@@ -310,7 +308,7 @@ def draw_map():
 
     original_all_zones = sorted(zone_gdf[zone_col].dropna().unique())
     print("\n" + "=" * 60)
-    print("🟢 原始SHP全部区划：", len(original_all_zones), "个")
+    print("🟢 原始SHP全部区划（所有颜色）：", len(original_all_zones), "个")
     print("=" * 60)
     for z in original_all_zones:
         print(f" - {z}")
@@ -324,40 +322,52 @@ def draw_map():
     valid_count = len(valid_counties)
     print(f"\n📅 【{cfg.TARGET_YEAR}年 Excel 有效县数量】：{valid_count} 个")
 
-    plot_gdf = accurate_zone_match(county_gdf, zone_gdf, zone_col)
-    print_match_statistics(plot_gdf)
-
+    plot_gdf = robust_zone_match(county_gdf, zone_gdf, zone_col)
     plot_gdf['in_excel'] = plot_gdf['match_name'].isin(valid_counties)
-    plot_gdf['Plot_Zone'] = plot_gdf['Agri_Zone']
-    plot_gdf.loc[~plot_gdf['in_excel'], 'Plot_Zone'] = np.nan
 
     fig, ax = plt.subplots(1, 1, figsize=cfg.FIG_SIZE, dpi=cfg.DPI)
 
-    plot_gdf.plot(ax=ax, facecolor=cfg.NULL_COLOR, edgecolor=cfg.BORDER_COLOR, linewidth=cfg.BORDER_WIDTH)
-
-    plot_data = plot_gdf[plot_gdf['Plot_Zone'].notna()].copy()
-    all_zones = sorted(plot_gdf['Agri_Zone'].dropna().unique())
+    zone_plot = zone_gdf.copy()
+    all_zones = zone_plot[zone_col].dropna().unique()
     color_map = {z: cfg.COLORS[i % len(cfg.COLORS)] for i, z in enumerate(all_zones)}
+    zone_plot.plot(ax=ax, color=zone_plot[zone_col].map(color_map), edgecolor='none', alpha=0.9)
 
-    if not plot_data.empty:
-        plot_data.plot(
-            ax=ax,
-            color=plot_data['Plot_Zone'].map(color_map),
-            edgecolor=cfg.BORDER_COLOR,
-            linewidth=cfg.BORDER_WIDTH
-        )
+    no_data = plot_gdf[~plot_gdf['in_excel']]
+    no_data.plot(ax=ax, facecolor='white', edgecolor='white', linewidth=0)
 
-    # ==============================================
-    # ✅ 修复：只保留【图上实际画出的区划】作为图例
-    # ==============================================
-    plotted_zones = sorted(plot_data['Plot_Zone'].dropna().unique())  # 真正画在图上的区域
-    valid_zones = plotted_zones
+    final_used_zones = original_all_zones
 
+    # ===================== 计算有效面积（排除白色区域） =====================
+    print("\n" + "=" * 60)
+    print("✅ 【最终图上彩色区域面积】白色无数据区已排除")
+    print("=" * 60)
+
+    valid_counties = plot_gdf[plot_gdf['in_excel']].copy()
+
+    # ✅ 修复几何错误（只加这两行，不改变任何逻辑）
+    valid_counties["geometry"] = valid_counties["geometry"].make_valid()
+    zone_gdf["geometry"] = zone_gdf["geometry"].make_valid()
+
+    clip_geom = valid_counties.unary_union
+    clipped_zones = zone_gdf.clip(clip_geom)
+
+    proj = clipped_zones.to_crs("+proj=aea +lat_1=25 +lat_2=47 +lat_0=0 +lon_0=105 +datum=WGS84 +units=m +no_defs")
+    proj['area_km2'] = proj.geometry.area / 1e6
+    area_result = proj.groupby(zone_col)['area_km2'].sum()
+
+    # ===================== 自动删除面积=0的项，只保留有面积的图例 =====================
+    valid_zones = [z for z in final_used_zones if area_result.get(z, 0.0) > 0]
+    print(f"\n✅ 最终有效区划（有面积）：{len(valid_zones)} 个")
+    for z in valid_zones:
+        print(f" - {z:<20} 面积：{area_result.get(z, 0.0):>11.2f} km²")
+
+    # 翻译只保留有效区划
     trans_map = interactive_translate(valid_zones)
 
+    # 图例只生成有效区划
     legend_elements = []
     print("\n==================================================")
-    print("🗺️ 最终图例（仅显示图上存在的区域）：")
+    print("🗺️ 最终图例（已剔除面积为0的项）：")
     print("==================================================")
     for z in valid_zones:
         en_name = trans_map[z]
@@ -366,7 +376,11 @@ def draw_map():
             mpatches.Patch(facecolor=color_map[z], edgecolor='black', label=en_name)
         )
     legend_elements.append(mpatches.Patch(facecolor='white', edgecolor='black', label='No Data'))
+    # ==================================================================================
 
+    plot_gdf.plot(ax=ax, facecolor='none', edgecolor=cfg.BORDER_COLOR, linewidth=cfg.BORDER_WIDTH)
+
+    # ===================== 绘制国界（黑色 稍粗）+ 海岸线（0A93FC） =====================
     border_gdf.plot(ax=ax, color="black", linewidth=2.0, zorder=5)
     coastline_gdf.plot(ax=ax, color="#0A93FC", linewidth=1.0, zorder=5)
 
@@ -374,6 +388,7 @@ def draw_map():
     add_scalebar(ax, plot_gdf)
     add_compass(ax, img_compass)
 
+    # ===================== 图例向下移动一点 =====================
     ax.legend(handles=legend_elements, loc='lower left', fontsize=cfg.LEGEND_FONT_SIZE, frameon=True,
               bbox_to_anchor=(0.02, 0.039))
 
@@ -381,7 +396,6 @@ def draw_map():
     plt.savefig(cfg.SAVE_PATH.replace('.svg', '.png'), format='png', dpi=cfg.DPI, bbox_inches='tight')
     plt.close()
     print(f"\n✅ 绘图完成：{cfg.SAVE_PATH.replace('.svg', '.png')}")
-
 
 if __name__ == "__main__":
     draw_map()
